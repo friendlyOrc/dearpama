@@ -1,0 +1,53 @@
+*{
+  margin: 0 !important;
+  padding: 0 !important;
+  animation: appear 0.7s;
+}
+.appear{
+  animation: appear 0.7s;
+}
+@keyframes appear{
+  0%{
+    opacity: 0;
+  }
+  25%{
+    opacity: 0,25;
+  }
+  50%{
+    opacity: 0.5;
+  }
+  75%{
+    opacity: 0.75;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+@font-face {
+  font-family: Poppin-Medium;
+  src: url(font/Poppins-Medium.ttf);
+}
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.active{
+  display: block;
+}
+.disable{
+  display: none !important;
+}
+.scence{
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.scence__text{
+  font-family: Poppin-Medium, sans-serif;
+  font-size: 40px;
+  color: #E78773;
+}

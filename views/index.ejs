@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="scence scence__1 active" onclick="nextScence(1)">
+      <p class="scence__text">Turn on sound</p>
+    </div>
+    <div class="scence scence__2 disable" onclick="nextScence('two')">
+      <p class="scence__text">Click to start</p>
+    </div>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script>
+      function nextScence(str){
+        let scence = ".scence__" + str;
+        $(scence).addClass('disable').removeClass('active');
+        let next = parseInt(str) + 1;
+        let nextS = ".scence__" + next;
+        console.log(nextS);
+        $(nextS).addClass('active').removeClass('disable');
+      }
+      $(document).ready(function(){
+        if($(".scence").is(":visible")){
+          $(".scence").addClass('appear');
+        }
+      });
+    </script>
+  </body>
+</html>
