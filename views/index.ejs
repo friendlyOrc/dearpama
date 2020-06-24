@@ -8,9 +8,26 @@
     <div class="scence scence__1 active" onclick="nextScence(1)">
       <p class="scence__text">Turn on sound</p>
     </div>
-    <div class="scence scence__2 disable" onclick="nextScence('two')">
+
+    <div class="scence scence__2 disable" onclick="nextScence(2)">
       <p class="scence__text">Click to start</p>
     </div>
+
+    <div class="scence scence__3 disable" onclick="nextScence(3)">
+      <div class="text__wrapper">
+          <p class="scence__text scence__text--left" style="font-size: 64px;">Family (n)</p>
+          <p class="scence__text scence__text--left delay" style="color: #fff;">People in your life who are close to your <br>heart. Who bring out the best in 
+            you, who <br> laugh, celebrate and dream with you. <br> Who love you infinitely.</p>
+      </div>
+    </div>
+    <div class="scence scence__4 disable" onclick="nextScence(4)">
+      <div class="text__wrapper">
+          <p class="scence__text--left" style="font-size: 64px;">Family (n)</p>
+          <p class="scence__text scence__text--left delay">People in your life who are close to your <br>heart. Who bring out the best in 
+      you, who <br> laugh, celebrate and dream with you. <br> Who love you infinitely.</p>
+      </div>
+    </div>
+
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
     <script>
       function nextScence(str){
@@ -22,10 +39,14 @@
         $(nextS).addClass('active').removeClass('disable');
       }
       $(document).ready(function(){
-        if($(".scence").is(":visible")){
-          $(".scence").addClass('appear');
+        
+        if($(".scence__text").is(":visible")){
+            $(".scence__text").addClass('appear');
         }
       });
     </script>
+
+
+
   </body>
 </html>

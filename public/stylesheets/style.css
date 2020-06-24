@@ -1,7 +1,8 @@
 *{
   margin: 0 !important;
   padding: 0 !important;
-  animation: appear 0.7s;
+  /* animation: appear 0.7s; */
+  font-family: Poppin-Medium, sans-serif;
 }
 .appear{
   animation: appear 0.7s;
@@ -23,9 +24,26 @@
     opacity: 1;
   }
 }
+@keyframes disable{
+  0%{
+    opacity: 1;
+  }
+  25%{
+    opacity: 0,75;
+  }
+  50%{
+    opacity: 0.5;
+  }
+  75%{
+    opacity: 0.25;
+  }
+  100%{
+    opacity: 0;
+  }
+}
 @font-face {
   font-family: Poppin-Medium;
-  src: url(font/Poppins-Medium.ttf);
+  src: url(font/Poppins-Regular.ttf);
 }
 body {
   height: 100%;
@@ -34,8 +52,10 @@ body {
 }
 .active{
   display: block;
+  opacity: 1;
 }
 .disable{
+  opacity: 0;
   display: none !important;
 }
 .scence{
@@ -45,9 +65,19 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
 }
 .scence__text{
-  font-family: Poppin-Medium, sans-serif;
+  font-size: 40px;
+  color: #E78773;
+}
+.text__wrapper{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.scence__text--left{
+  text-align: left;
   font-size: 40px;
   color: #E78773;
 }
