@@ -16,15 +16,16 @@
     <div class="scence scence__3 disable" onclick="nextScence(3)">
       <div class="text__wrapper">
           <p class="scence__text scence__text--left" style="font-size: 64px;">Family (n)</p>
-          <p class="scence__text scence__text--left delay" style="color: #fff;">People in your life who are close to your <br>heart. Who bring out the best in 
-            you, who <br> laugh, celebrate and dream with you. <br> Who love you infinitely.</p>
+          <br>
+          <p class="scence__text scence__text--left delay disable" >People in your life who are close to your <br>heart. Who bring out the best in 
+            you, who <br> laugh, celebrate and dream with you. <br> Who love you infinitely.
+          </p>
       </div>
     </div>
-    <div class="scence scence__4 disable" onclick="nextScence(4)">
-      <div class="text__wrapper">
-          <p class="scence__text--left" style="font-size: 64px;">Family (n)</p>
-          <p class="scence__text scence__text--left delay">People in your life who are close to your <br>heart. Who bring out the best in 
-      you, who <br> laugh, celebrate and dream with you. <br> Who love you infinitely.</p>
+
+    <div class="scence scence__4 disable" onclick="transform('scence__4')">
+      <div class="text__wrapper circle">
+          <p class="scence__text scence__text--white">DEARPARENTS</p>
       </div>
     </div>
 
@@ -32,16 +33,40 @@
     <script>
       function nextScence(str){
         let scence = ".scence__" + str;
-        $(scence).addClass('disable').removeClass('active');
+        $(scence).addClass('disappear');
+        setTimeout(() => { $(scence).addClass('disable').removeClass('active'); }, 500);
+        
         let next = parseInt(str) + 1;
         let nextS = ".scence__" + next;
         console.log(nextS);
-        $(nextS).addClass('active').removeClass('disable');
+        
+        $(nextS).addClass('appear');
+        setTimeout(() => { $(nextS).addClass('active').removeClass('disable'); }, 500);
+        
+      }
+      function transform(str){
+        let scence = "." + str;
+        // $(".text__wrapper").addClass('bg--invi');
+
+        setTimeout(() => { 
+          $(scence).addClass('bg--colored');
+          $(".text__wrapper").addClass('bg--colored'); 
+        }, 0);
+
+        $(".scence__text").addClass('scence__text--dark').removeClass('sence__text--white');
+        
+        setTimeout(() => { $(".scence__text").addClass('text--bigger'); }, 250);
+
+        
+        setTimeout(() => { $(".scence__text").addClass('text--totop'); }, 2000);
       }
       $(document).ready(function(){
         
         if($(".scence__text").is(":visible")){
-            $(".scence__text").addClass('appear');
+            $(".scence__text").addClass('appear').removeClass('disable');
+        }
+        if($(".text__wrapper").is(":visible")){
+            $(".text__wrapper").addClass('appear');
         }
       });
     </script>
