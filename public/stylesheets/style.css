@@ -107,7 +107,7 @@ body {
   position: relative;
 }
 .scence__text{
-  font-size: 40px;
+  font-size: 2vw;
   color: #E78773;
 }
 .text__wrapper{
@@ -117,7 +117,7 @@ body {
 }
 .scence__text--left{
   text-align: left;
-  font-size: 40px;
+  font-size: 2vw;
   color: #E78773;
 }
 .circle{
@@ -147,7 +147,7 @@ body {
   animation-delay: 1.5s !important;
 }
 .text--bigger{
-  font-size: 65px;
+  font-size: 3.385vw;
   letter-spacing: 7.8px;
   transition: 1s ease-in-out;
 }
@@ -160,7 +160,7 @@ body {
   transition: 1s ease-in-out;
 }
 .text--totop{
-  font-size: 35px;
+  font-size: 1.823vw;
   top: 10%;
   transition: 1s ease-in-out;
 }
